@@ -37,7 +37,12 @@ export const updateProduct = async(req, res) => {
 
     const { name_product,price,description,image } = req.body;
     try {
-        await Products.update({name_product: name_product,price: price,description: description,image: image},{
+        await Products.update({
+            name_product: name_product,
+            price: price,
+            description: description,
+            image: image
+        },{
             where:{
                     id: req.params.id
             }
